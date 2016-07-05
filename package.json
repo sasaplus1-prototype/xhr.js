@@ -1,0 +1,22 @@
+{
+  "name": "xhr",
+  "version": "0.1.0",
+  "author": "sasa+1 <sasaplus1@gmail.com>",
+  "description": "simple XMLHttpRequest",
+  "main": "./index.js",
+  "license": "MIT",
+  "readmeFilename": "README.md",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sasaplus1-prototype/xhr.js.git"
+  },
+  "scripts": {
+    "build": "npm run compile && npm run minify",
+    "compile": "npm run webpack -- --output-file xhr.js",
+    "minify": "npm run webpack -- --optimize-minimize --output-file xhr.min.js",
+    "webpack": "webpack --colors --display-error-details --progress"
+  },
+  "devDependencies": {
+    "webpack": "^1.13.1"
+  }
+}
