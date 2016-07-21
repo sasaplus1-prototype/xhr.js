@@ -141,13 +141,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	      throw new TypeError('callback must be a Function');
 	    } else {
 	      return new Promise(function(resolve, reject) {
-	        that.end(data, function(err, xhr) {
+	        that.end(data, function(err, text, xhr) {
 	          (err) ? reject({
 	            err: err,
-	            statusText: xhr.statusText,
+	            statusText: text,
 	            xhr: xhr
 	          }) : resolve({
-	            responseText: xhr.responseText,
+	            responseText: text,
 	            xhr: xhr
 	          });
 	        });
