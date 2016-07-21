@@ -75,7 +75,7 @@ XHR.prototype.end = function(data, callback) {
   var that = this,
       xhr, headerName, timeoutId;
 
-  if (typeof callback !== 'undefined') {
+  if (typeof callback === 'undefined') {
     if (typeof Promise === 'undefined') {
       throw new TypeError('callback must be a Function');
     } else {
